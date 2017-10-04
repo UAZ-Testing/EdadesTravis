@@ -1,0 +1,13 @@
+---
+before_script:
+#  - "autopep8 -ir *"
+  - "flake8 --max-complexity=5 --exclude=*.txt,*.md *"
+install:
+  - "pip install -r requirements.txt"
+language: python
+python:
+  - "2.7"
+script:
+  - "python3 edadtest.py"
+  - "lettuce bdd/tests"
+  - "coverage run --branch edadtest.py"
