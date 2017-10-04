@@ -1,7 +1,7 @@
 ---
 before_script:
 #  - "autopep8 -ir *"
-  - "flake8 --ignore F821 --max-complexity=5 --exclude=*.txt,*.md *"
+  - "flake8 --ignore F821 --max-complexity=8 --exclude=*.txt,*.md *"
 install:
   - "pip install -r requirements.txt"
 language: python
