@@ -1,5 +1,6 @@
 # coding=utf-8
 
+
 class Edad:
     def evaluar_edad(self, edad):
         if not isinstance(edad, (int, float)):
