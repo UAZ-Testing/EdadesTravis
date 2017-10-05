@@ -8,6 +8,6 @@ python:
   - "2.7"
   - "3.5"
 script:
-  - "python edadtest.py"
+  - "python3 edadtest.py"
   - "coverage run --branch edadtest.py"
   - "if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then lettuce bdd/tests; fi"
