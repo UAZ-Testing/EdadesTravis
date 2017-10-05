@@ -13,4 +13,4 @@ python:
 script:
   - "python edadtest.py"
   - "coverage run --branch edadtest.py"
-  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then lettuce bdd/tests; fi
+  - "if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then lettuce bdd/tests; fi"
