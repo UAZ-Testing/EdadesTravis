@@ -1,3 +1,5 @@
+notifications:
+  email: false
 ---
 before_script:
 #  - "autopep8 -ir *"
@@ -7,7 +9,8 @@ install:
 language: python
 python:
   - "2.7"
+  - "3.5"
 script:
-  - "python3 edadtest.py"
-  - "lettuce bdd/tests"
+  - "python edadtest.py"
   - "coverage run --branch edadtest.py"
+  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then lettuce bdd/tests; fi
