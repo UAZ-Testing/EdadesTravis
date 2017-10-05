@@ -9,5 +9,5 @@ python:
   - "3.5"
 script:
   - "python3 edadtest.py"
-  - "coverage run --branch edadtest.py"
+  - "if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then coverage run --branch edadtest.py; fi"
   - "if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then lettuce bdd/tests; fi"
